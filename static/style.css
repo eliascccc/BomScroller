@@ -1,0 +1,142 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #111;
+}
+
+.page {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.topbar {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.sku-form label {
+    font-size: 48px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.sku-form select {
+    font-size: 28px;
+    padding: 8px 12px;
+}
+
+.browser {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr 120px;
+    min-height: 700px;
+    border: 6px solid #000;
+    background: #fff;
+}
+
+.arrow-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 6px solid #000;
+}
+
+.arrow-col:last-child {
+    border-right: none;
+    border-left: 6px solid #000;
+}
+
+.arrow-btn {
+    font-size: 72px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 8px 18px;
+}
+
+.version-panel {
+    border-right: 6px solid #000;
+    padding: 18px;
+    overflow: auto;
+}
+
+.version-panel:last-of-type {
+    border-right: none;
+}
+
+.center-panel {
+    background: #f7f7f7;
+}
+
+.version-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.version-date {
+    font-size: 30px;
+    color: #666;
+    margin-bottom: 6px;
+    text-align: center;
+
+}
+
+.bom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.bom-table th,
+.bom-table td {
+    border: 1px solid #bbb;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.bom-table th {
+    background: gainsboro;
+}
+
+.row-added {
+    background: #dff5df;
+}
+
+.row-removed {
+    background: #ffdede;
+}
+
+.row-changed {
+    background: #fff6bf;
+}
+
+.row-same,
+.row-center {
+    background: white;
+}
+
+
+.row-blue td {
+    background: #dbeafe;
+}
+
+.row-purple td {
+    background: #ede9fe;
+}
+
+/* center row changed against both left and right */
+.row-blue.row-purple td {
+    background: linear-gradient(
+        to right,
+        #dbeafe 0%,
+        #dbeafe 50%,
+        #ede9fe 50%,
+        #ede9fe 100%
+    );
+}

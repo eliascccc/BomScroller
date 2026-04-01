@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BomScroller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="page">
+    <div class="topbar">
+        <form method="get" action="{{ url_for('show_sku', sku=sku) }}" class="sku-form">
+            <label for="sku-select">SKU:</label>
+            <select id="sku-select" onchange="window.location=this.value">
+                {% for item in skus %}
+                    <option
+                        value="{{ url_for('show_sku', sku=item) }}"
+                        {% if item == sku %}selected{% endif %}
+                    >
+                        {{ item }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
+    <div class="browser">
+        <div class="arrow-col">
+            {% if prev_center %}
+                <a class="arrow-btn" href="{{ url_for('show_sku', sku=sku, center=prev_center) }}">←</a>
+            {% endif %}
+        </div>
+
+        <div class="version-panel">
+            <div class="version-title">
+                {% if left_version %}ver {{ left_version.version }}{% else %}-{% endif %}
+            </div>
+
+            {% if left_version %}
+            <table class="bom-table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in left_rows %}
+                    <tr class="row-{{ row.status }}">
+                        <td>{{ row.part }}</td>
+                        <td>{{ row.desc }}</td>
+                        <td>{{ row.qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+
+        <div class="version-panel center-panel">
+            <div class="version-title">ver {{ center_version.version }}</div>
+
+           <div class="version-date">{{ center_version.date }}</div>
+
+            <table class="bom-table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in center_rows %}
+                    <tr class="{% if row.diff_left %}row-blue{% endif %}{% if row.diff_right %} row-purple{% endif %}">
+                        <td>{{ row.part }}</td>
+                        <td>{{ row.desc }}</td>
+                        <td>{{ row.qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="version-panel">
+            <div class="version-title"> {% if right_version %}ver {{ right_version.version }}{% else %}-{% endif %} </div>
+            <div class="version-date">{{ center_version.date }}
+            {% if right_version %} to {{ right_version.date }}  {% endif %}</div>
+
+            {% if right_version %}
+            <table class="bom-table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in right_rows %}
+                    <tr class="row-{{ row.status }}">
+                        <td>{{ row.part }}</td>
+                        <td>{{ row.desc }}</td>
+                        <td>{{ row.qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+
+        <div class="arrow-col">
+            {% if next_center %}
+                <a class="arrow-btn" href="{{ url_for('show_sku', sku=sku, center=next_center) }}">→</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
