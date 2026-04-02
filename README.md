@@ -18,7 +18,7 @@ The goal is simple:
 
 ---
 ## Example
-<img width="1810" height="809" alt="image" src="https://github.com/user-attachments/assets/be8a89c7-7a19-49aa-9d0a-5b260b941566" />
+<img width="1835" height="835" alt="image" src="https://github.com/user-attachments/assets/a8f9e183-f807-4eef-84a2-c89b39fe1eac" />
 
 ---
 
