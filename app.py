@@ -60,13 +60,13 @@ FAKE_DB = {
 
         {"sku": "11024", "item_grp": "0200", "item": "410120-01", "description": "Base frame",     "qty": 1,  "from_date": "2024-01-15", "to_date": None},
         {"sku": "11024", "item_grp": "0300", "item": "420230-01", "description": "Bolt M8",        "qty": 10, "from_date": "2024-01-15", "to_date": "2024-03-14"},
-        {"sku": "11024", "item_grp": "0400", "item": "430340-01", "description": "Support arm",    "qty": 2,  "from_date": "2024-01-15", "to_date": "2024-04-14"},
+        {"sku": "11024", "item_grp": "0400", "item": "430340-01", "description": "Helper arm",    "qty": 2,  "from_date": "2024-01-15", "to_date": "2024-04-14"},
         {"sku": "11024", "item_grp": "0500", "item": "440450-01", "description": "Lock washer",    "qty": 10, "from_date": "2024-01-15", "to_date": None},
-        {"sku": "11024", "item_grp": "0600", "item": "450560-01", "description": "Side panel",     "qty": 2,  "from_date": "2024-01-15", "to_date": "2024-02-14"},
+        {"sku": "11024", "item_grp": "0600", "item": "450560-01", "description": "Side panel v1",     "qty": 2,  "from_date": "2024-01-15", "to_date": "2024-02-14"},
         {"sku": "11024", "item_grp": "0700", "item": "460670-01", "description": "Top cover",      "qty": 1,  "from_date": "2024-01-15", "to_date": None},
         {"sku": "11024", "item_grp": "0800", "item": "470780-01", "description": "Rubber foot",    "qty": 4,  "from_date": "2024-01-15", "to_date": "2024-04-14"},
         {"sku": "11024", "item_grp": "0900", "item": "480890-01", "description": "Cable gland",    "qty": 2,  "from_date": "2024-01-15", "to_date": None},
-        {"sku": "11024", "item_grp": "1000", "item": "490900-01", "description": "Name plate",     "qty": 1,  "from_date": "2024-01-15", "to_date": "2027-03-14"},
+        {"sku": "11024", "item_grp": "1000", "item": "490900-01", "description": "Name plate (eng)",     "qty": 1,  "from_date": "2024-01-15", "to_date": "2027-03-14"},
         {"sku": "11024", "item_grp": "1100", "item": "401010-01", "description": "Inspection tag", "qty": 1,  "from_date": "2024-01-15", "to_date": None},
 
         # -------------------------
